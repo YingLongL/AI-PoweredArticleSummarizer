@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const OpenAI = require('openai');
 
-// Initialize OpenAI client
+//Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -103,6 +103,7 @@ const generateSummary = async (title, content) => {
       summaryText,
       summaryWordCount
     };
+
   } catch (error) {
     console.error('Error generating summary:', error);
     throw new Error('Failed to generate summary using AI');
