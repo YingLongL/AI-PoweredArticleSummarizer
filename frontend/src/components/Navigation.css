@@ -1,21 +1,23 @@
 /* Navigation.css */
 
 .navbar {
-    background-color: #007BFF;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link {
-    color: white;
-    font-weight: 600;
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
+  background-color: #343a40; /* A more sophisticated dark background */
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #f8f9fa; /* Light text for contrast */
+  font-weight: 500; /* Slightly lighter font weight */
+  margin-right: 25px; /* A bit more spacing */
+  text-decoration: none;
+  font-size: 1rem; /* Use rem for better scalability */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Highlight on hover */
+  text-decoration: none; /* Remove underline on hover for a cleaner look */
+}
   

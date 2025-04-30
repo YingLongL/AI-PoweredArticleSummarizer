@@ -1,63 +1,52 @@
 /* App.css */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif; /* A more modern and readable font */
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: beige; /* A softer background color */
+    color: #343a40; /* Darker default text color */
   }
   
   .container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px 30px;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    min-height: 90vh;
-  }
-  
-  nav {
-    background-color: #007BFF;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-  }
-  
-  nav a {
-    color: white;
-    font-weight: 600;
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
+    max-width: 900px; /* Slightly wider container */
+    margin: 40px auto; /* More top/bottom margin */
+    padding: 30px; /* More padding inside */
+    background-color: lightsteelblue; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    border-radius: 12px; /* More rounded corners */
+    min-height: 80vh; /* Adjust min height */
   }
   
   h2 {
-    color: #333;
-    margin-bottom: 20px;
+    color: #2c3e50; /* Darker heading color */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #dee2e6; /* Subtle bottom border for separation */
+    padding-bottom: 10px;
   }
   
   form input {
-    width: 100%;
+    width: calc(100% - 24px); /* Account for padding and border */
     padding: 12px;
-    margin: 10px 0 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+    margin: 15px 0; /* Adjust margin */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle focus shadow */
   }
   
   form button {
-    padding: 12px 20px;
+    padding: 12px 25px; /* Adjust button padding */
     background-color: #28a745;
     color: white;
     border: none;
-    font-size: 16px;
-    border-radius: 6px;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -68,12 +57,12 @@ body {
   
   button {
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 15px; /* Adjust margin */
     background-color: #17a2b8;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -84,13 +73,22 @@ body {
   
   .summary-box {
     border: 1px solid #ddd;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    background-color: #fafafa;
+    padding: 25px; /* More padding */
+    margin-top: 25px; /* More margin */
+    border-radius: 10px; /* More rounded corners */
+    background-color: #f8f9fa; /* Lighter background */
   }
   
-  p {
-    line-height: 1.6;
-    font-size: 16px;
-  }  
+  .summary-box h3 {
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+  }
+  
+  .summary-box p {
+    line-height: 1.7; /* Improved line height for readability */
+    font-size: 1rem;
+    color: #495057; /* Slightly softer text color */
+  }
