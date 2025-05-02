@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import api from '../services/api';
+// import './HomePageStyle.css'
 
 function HomePage() {
   const [url, setUrl] = useState('');
@@ -30,7 +31,6 @@ function HomePage() {
         alert('You must be logged in to save summaries.');
         return;
       }
-
       await api.post('/summaries/save', {
         title: "Mock Title", // Since we mocked summarizer, we don't have real title right now
         originalUrl: url,
@@ -41,7 +41,6 @@ function HomePage() {
       }, {
         headers: { Authorization: `Bearer ${token}` }
       });
-
       setSaveMessage('Summary saved successfully!');
     } catch (err) {
       console.error(err);
@@ -63,16 +62,13 @@ function HomePage() {
         <br />
         <button type="submit">Summarize</button>
       </form>
-
       {loading && <p>Loading summary...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {saveMessage && <p style={{ color: 'green' }}>{saveMessage}</p>}
-
+      {error && <p className="error">{error}</p>}
+      {saveMessage && <p className="success">{saveMessage}</p>}
       {summary && (
-        <div style={{ marginTop: '20px' }}>
+        <div className="summary-container">
           <h3>Summary:</h3>
           <p>{summary}</p>
-
           {/* Save Summary Button */}
           <button onClick={handleSaveSummary}>Save Summary</button>
         </div>
@@ -82,4 +78,3 @@ function HomePage() {
 }
 
 export default HomePage;
-  
